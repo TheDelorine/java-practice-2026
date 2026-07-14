@@ -3,7 +3,6 @@ package ru.itis.shop.user.infrastructure.persistence;
 import ru.itis.shop.user.domain.User;
 
 public class UserMapper {
-
     public User fromLine(String line) {
         String[] parts = line.split("\\|");
 
@@ -15,5 +14,12 @@ public class UserMapper {
                 user.getEmail() + "|" +
                 user.getPassword() + "|" +
                 user.getProfileDescription();
+    }
+
+    public String toLine(User user, String newDescription) {
+        return user.getId() + "|" +
+                user.getEmail() + "|" +
+                user.getPassword() + "|" +
+                newDescription;
     }
 }

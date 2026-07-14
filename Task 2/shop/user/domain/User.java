@@ -22,6 +22,8 @@ public class User {
         this.profileDescription = profileDescription;
     }
 
+
+
     public String getId() {
         return id;
     }
@@ -52,5 +54,15 @@ public class User {
 
     public void setProfileDescription(String profileDescription) {
         this.profileDescription = profileDescription;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id='" + id + '\'' +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                ", profileDescription='" + profileDescription + '\'' +
+                '}';
     }
 }
